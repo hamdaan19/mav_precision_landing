@@ -40,8 +40,21 @@ To simulate a firefly drone moving vertically up and down over a marker to locat
 ```
 roslaunch mav_precision_landing basic.launch
 ```
-In a new terminal run:
-```
-rosrun mav_precision_landing main.py
-```
 
+## Citations
+1. @Inbook{Furrer2016,
+author="Furrer, Fadri
+and Burri, Michael
+and Achtelik, Markus
+and Siegwart, Roland",
+editor="Koubaa, Anis",
+chapter="RotorS---A Modular Gazebo MAV Simulator Framework",
+title="Robot Operating System (ROS): The Complete Reference (Volume 1)",
+year="2016",
+publisher="Springer International Publishing",
+address="Cham",
+pages="595--625",
+isbn="978-3-319-26054-9",
+doi="10.1007/978-3-319-26054-9_23",
+url="http://dx.doi.org/10.1007/978-3-319-26054-9_23"
+}
