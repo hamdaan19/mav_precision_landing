@@ -29,6 +29,7 @@ git clone https://github.com/hamdaan19/mav_precision_landing.git
 ```
 cd ..
 catkin config --extend ~/<PATH_TO_ROTORS_SIMULATOR_WS>/devel
+```
 6. Build your workspace
 ```
 catkin build
