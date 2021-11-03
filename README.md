@@ -42,7 +42,7 @@ roslaunch mav_precision_landing basic.launch
 ```
 
 ## Citations
-1. @Inbook{Furrer2016,
+@Inbook{Furrer2016,
 author="Furrer, Fadri
 and Burri, Michael
 and Achtelik, Markus
