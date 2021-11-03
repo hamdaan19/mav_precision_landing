@@ -95,7 +95,7 @@ class MarkerPose(TargetTracker, Utils, MakeTrajectory):
         self.X, self.Y, self.Z = self.transform_point(transformation, point_wrt_camera_frame)
         #self.start_landing()
 
-        print(f"Transformed: {self.X}\t{self.Y}\t{self.Z}")
+        rospy.loginfo(f"Transformed Point: {self.X}\t{self.Y}\t{self.Z}")
 
     def transform_point(self, transformation, point_wrt_camera_frame):
         point_wrt_map_frame = tf2_geometry_msgs.do_transform_point(
