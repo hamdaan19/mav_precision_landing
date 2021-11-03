@@ -14,7 +14,7 @@ if __name__ == '__main__':
     rospy.init_node('markerDetector', anonymous=False)
 
     raw_image_topic = "/firefly/vi_sensor/left/image_raw"
-    disparity_topic = "/my_stereo/disparity" 
+    disparity_topic = "/mav_precision_landing/vi_stereo/disparity" 
 
     test = MarkerPose(raw_image_topic=raw_image_topic, disparity_topic=disparity_topic)
     test.loop()
