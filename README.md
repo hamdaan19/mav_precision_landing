@@ -30,7 +30,7 @@ git clone https://github.com/hamdaan19/mav_precision_landing.git
 cd ..
 catkin config --extend ~/<PATH_TO_ROTORS_SIMULATOR_WS>/devel
 ```
-7. Build and then Source your workspace
+7. Build and then source your workspace
 ```
 catkin build
 source devel/setup.bash
