@@ -42,5 +42,5 @@ roslaunch mav_precision_landing basic.launch
 ```
 
 ## Citations
-**rotors_similator**
+**rotors_simulator**
 <p>Fadri Furrer, Micheal Burri, Markus Achtelik, and Roland Siegwart, "<b>RotorS---A Modular Gazebo MAV Simulator Framework in Robot Operating System (ROS): The Complete Reference (Volume 1)</b>", pages: 595--625. In "<i>Springer International Publishing</i>" 2016.</p> 
