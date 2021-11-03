@@ -1,0 +1,8 @@
+<launch>   
+    <node name="proc_node" pkg="stereo_image_proc" type="stereo_image_proc" ns="my_stereo">
+            <remap from="left/image_raw" to="/firefly/vi_sensor/left/image_raw"/>
+            <remap from="left/camera_info" to="/firefly/vi_sensor/left/camera_info" /> 
+            <remap from="right/image_raw" to="/firefly/vi_sensor/right/image_raw"/>
+            <remap from="right/camera_info" to="/firefly/vi_sensor/right/camera_info"/>
+    </node>
+</launch>

@@ -1,0 +1,15 @@
+<launch>
+
+  <arg name="model" default="$(find mav_precision_landing)/urdf/box_marker_35.urdf"/>
+
+  <arg name="model_name" default="marker"/>
+
+  <param name="robot_description" command="cat '$(arg model)'" />
+
+  <node name="marker_spawner" pkg="gazebo_ros" type="spawn_model" 
+          args="
+      -param robot_description
+      -model $(arg model_name)
+      -x 2.0 -y 2.0 -z 0.0
+    "/>
+</launch>
