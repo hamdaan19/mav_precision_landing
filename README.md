@@ -35,5 +35,13 @@ catkin config --extend ~/<PATH_TO_ROTORS_SIMULATOR_WS>/devel
 catkin build
 source devel/setup.bash
 ```
-
+## Usage
+To simulate a firefly drone moving vertically up and down over a marker to locate its position in 3D world coordinates:
+```
+roslaunch mav_precision_landing basic.launch
+```
+In a new terminal run:
+```
+rosrun mav_precision_landing main.py
+```
 
