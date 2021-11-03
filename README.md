@@ -45,7 +45,7 @@ roslaunch mav_precision_landing basic.launch
 @Inbook{Furrer2016,
 author="Furrer, Fadri
 and Burri, Michael
-and Achtelik, Markus
+and 
 and Siegwart, Roland",
 editor="Koubaa, Anis",
 chapter="RotorS---A Modular Gazebo MAV Simulator Framework",
@@ -58,3 +58,6 @@ isbn="978-3-319-26054-9",
 doi="10.1007/978-3-319-26054-9_23",
 url="http://dx.doi.org/10.1007/978-3-319-26054-9_23"
 }
+
+1. **rotors_similator**
+<p>Fadri Furrer, Micheal Burri, Markus Achtelik, and Roland Siegwart, "<b>RotorS---A Modular Gazebo MAV Simulator Framework in Robot Operating System (ROS): The Complete Reference (Volume 1)</b>", pages: 595--625. In "<i>Springer International Publishing</i>" 2016.</p> 
