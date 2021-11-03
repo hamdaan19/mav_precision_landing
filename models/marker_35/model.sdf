@@ -1,0 +1,32 @@
+<?xml version='1.0'?>
+<sdf version="1.5">
+
+  <model name='Marker 35'>
+    <pose frame=''>0 0 0 0 0 0</pose>
+    <static>1</static>
+    <link name='link'>
+
+      <collision name='collision'>
+        <geometry>
+          <mesh>
+		        <uri>model://marker_35/meshes/box_marker_35.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name='visual'>
+        <cast_shadows>1</cast_shadows>
+        <geometry>
+          <mesh>
+		        <uri>model://marker_35/meshes/box_marker_35.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+
+    </link>
+  </model>
+</sdf>
