@@ -29,11 +29,18 @@
             <rosparam command="load" file="$(find rotors_gazebo)/resource/$(arg mav_name).yaml" />
             <remap from="odometry" to="odometry_sensor1/odometry" />
         </node>
-        <node name="pose_commander" pkg="mav_precision_landing" type="mav_position.py"/>
         <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
         <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
     </group>
 
-    <include file="$(find mav_precision_landing)/launch/stereo.launch"/> 
+    <group ns="mav_precision_landing">
+        <node name="pose_commander" pkg="mav_precision_landing" type="mav_position.py"/>
+        <node name="pose_estimator" pkg="mav_precision_landing" type="main.py" output="screen"/>
+        <include file="$(find mav_precision_landing)/launch/stereo.launch">
+            <arg name="namespace" value="vi_stereo"/>
+        </include>   
+    </group>
+
+      
 
 </launch>
