@@ -1,6 +1,7 @@
 # mav_precision_landing
 
 ![gazebo simulation](/img/photo1.jpg "Gazebo Simulation with rotors_simulator")
+![disparity and raw image from VI sensor](/img/photo2.jpg "Disparity and raw image from VI sensor")
 
 This repository contains code for autonomous precision landing for micro aerial vehicles. It has been tested on ROS-Noetic. 
 
