@@ -1,4 +1,9 @@
 # mav_precision_landing
+
+<p align="center">
+<img src="img/photo1.jpg" style="height: 300px; width: 750px;"/>
+</p>
+
 This repository contains code for autonomous precision landing for micro aerial vehicles. It has been tested on ROS-Noetic. 
 
 ### Dependencies
