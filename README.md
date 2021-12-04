@@ -1,8 +1,6 @@
 # mav_precision_landing
 
-<p align="center">
-<img src="img/photo1.jpg" style="height: 350px; width: 750px;"/>
-</p>
+![gazebo simulation](/img/photo1.jpg "Gazebo Simulation with rotors_simulator")
 
 This repository contains code for autonomous precision landing for micro aerial vehicles. It has been tested on ROS-Noetic. 
 
