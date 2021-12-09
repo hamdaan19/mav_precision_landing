@@ -139,9 +139,5 @@
       <uri>model://asphalt_plane</uri>
     </include>
 
-    
-    
-    
-    
   </world>
 </sdf>

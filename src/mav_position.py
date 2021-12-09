@@ -13,20 +13,6 @@ if __name__ == '__main__':
     i = 2
     button = False
 
-    # dPoint.header.stamp = rospy.Time.now()
-    # dPoint.header.frame_id = "world"
-    # dPoint.pose.orientation.z = 0.0
-    # dPoint.pose.orientation.w = 0.0
-
-    # dPoint.pose.position.x = 2
-    # dPoint.pose.position.y = 2
-    # dPoint.pose.position.z = 10
-
-    # time.sleep(3)
-
-    # pub.publish(dPoint)
-
-
     while not rospy.is_shutdown():
 
         if (i == 10):

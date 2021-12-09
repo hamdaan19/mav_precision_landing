@@ -5,10 +5,11 @@ from sensor_msgs.msg import Image
 from stereo_msgs.msg import DisparityImage
 from geometry_msgs.msg import Pose, Point, PointStamped
 from utils import TargetTracker, Utils
-from make_trajectory import MakeTrajectory
+from land_mav import MakeTrajectory
 import numpy as np
 import tf2_ros
 import tf2_geometry_msgs
+import time
 
 class MarkerPose(TargetTracker, Utils, MakeTrajectory):
     def __init__(self, raw_image_topic, disparity_topic):
@@ -43,8 +44,8 @@ class MarkerPose(TargetTracker, Utils, MakeTrajectory):
 
 
     def pose(self, data):
-        self.current_x = data.position.z
-        self.current_y = data.position.z
+        self.current_x = data.position.x
+        self.current_y = data.position.y
         self.current_z = data.position.z
 
 
@@ -92,10 +93,10 @@ class MarkerPose(TargetTracker, Utils, MakeTrajectory):
             rospy.logerr('Unable to find the transformation from {0} to {1}'.format(self.camera_frame, self.map_frame))
         point_wrt_camera_frame = Point(x, y, z)
 
-        self.X, self.Y, self.Z = self.transform_point(transformation, point_wrt_camera_frame)
-        #self.start_landing()
+        self.X, self.Y, self.Z = self.transform_point(transformation, point_wrt_camera_frame)       
+        self.start_landing()
 
-        rospy.loginfo(f"Transformed Point: {self.X}\t{self.Y}\t{self.Z}")
+        #rospy.loginfo(f"Transformed Point: {self.X}\t{self.Y}\t{self.Z}")
 
     def transform_point(self, transformation, point_wrt_camera_frame):
         point_wrt_map_frame = tf2_geometry_msgs.do_transform_point(
@@ -106,24 +107,22 @@ class MarkerPose(TargetTracker, Utils, MakeTrajectory):
         return [point_wrt_map_frame.x, point_wrt_map_frame.y, point_wrt_map_frame.z]
 
 
-    def X_compensation(self, depth):
-        y = -0.3401*(depth) + 11.1012
-        X_comp = 1.5 - y
-        return X_comp
-
     def start_landing(self):
-        start_point = [self.current_x, self.current_y, self.current_z]
-        goal_point = [2, 2, self.Z]
-        rospy.loginfo(f"Planning trajectory from Start Point: {start_point} to Goal Point: {goal_point}...")
-        traj = super().make_trajectory(start_point, goal_point)
-        super().publish_trajectory(traj)
+        if self.current_z-self.Z < 0.1:
+            self.stop_flying()
+            print("stop flying", self.current_z, self.Z)
+        else:
+            current_point = np.asarray([self.current_x, self.current_y, self.current_z])
+            goal_point = np.asarray([2, 2, self.Z])
+            next_point = self.compute_next_point(current_point, goal_point)
+            print(current_point, next_point)
+            self.publish_next_point(next_point)
+            print("keep landing")
         
 
     def loop(self):
         rospy.logwarn("Entering into the loop...")
         rospy.spin()
-        # rospy.loginfo("Saving CSV file...")
-        # np.save("x_values(0).npy", self.comp_list)
-        # rospy.loginfo("CSV file is saved.")
+
 
 
