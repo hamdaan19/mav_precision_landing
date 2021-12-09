@@ -10,6 +10,7 @@ import numpy as np
 import tf2_ros
 import tf2_geometry_msgs
 import time
+import sys
 
 class MarkerPose(TargetTracker, Utils, MakeTrajectory):
     def __init__(self, raw_image_topic, disparity_topic):
@@ -37,6 +38,8 @@ class MarkerPose(TargetTracker, Utils, MakeTrajectory):
         self.map_frame = "world"
         #self.camera_frame = "firefly/vi_sensor/vi_sensor_link"
         self.camera_frame = "firefly/base_link"
+
+        self.landed = False
 
 
     def retrieve_frame(self, data):
@@ -82,9 +85,6 @@ class MarkerPose(TargetTracker, Utils, MakeTrajectory):
         z = -depth
 
         self.find_transformation(x, y, z)
-
-        
-
     
     def find_transformation(self, x, y, z):
         try:
@@ -108,21 +108,33 @@ class MarkerPose(TargetTracker, Utils, MakeTrajectory):
 
 
     def start_landing(self):
-        if self.current_z-self.Z < 0.1:
+
+        if self.current_z-self.Z < 2:
+            init_X = self.current_x
+            init_Y = self.current_y
+
+            while(self.current_z - 0.05 > 0.2): 
+                down_point = np.asarray([init_X, init_Y, self.current_z-0.01])
+                print("DESCENT: {}".format(self.current_z-self.Z))
+                self.publish_point(down_point)
+                time.sleep(0.01)
+                super().display_image(["disparity", "raw_image"], [self.disparity_image*0.1, self.raw_image])
+
             self.stop_flying()
-            print("stop flying", self.current_z, self.Z)
+
         else:
             current_point = np.asarray([self.current_x, self.current_y, self.current_z])
-            goal_point = np.asarray([2, 2, self.Z])
+            goal_point = np.asarray([2 - 0.2, 2, self.Z + 1]) #0.2 is X offset
             next_point = self.compute_next_point(current_point, goal_point)
             print(current_point, next_point)
-            self.publish_next_point(next_point)
+            self.publish_point(next_point)
             print("keep landing")
         
 
     def loop(self):
         rospy.logwarn("Entering into the loop...")
         rospy.spin()
+        rospy.loginfo("MAV has successfully landed.")
 
 
 
