@@ -132,12 +132,14 @@
 
     <include>
       <uri>model://marker_35</uri>
-      <pose>2 2 1.5 0 0 0</pose>
+      <pose>2 2 0.05 0 0 0</pose>
     </include>
     
     <include> 
       <uri>model://asphalt_plane</uri>
     </include>
+
+  <!-- <plugin name="ros_interface_plugin" filename="librotors_gazebo_ros_interface_plugin.so"></plugin> -->
 
   </world>
 </sdf>

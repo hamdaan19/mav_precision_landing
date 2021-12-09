@@ -22,8 +22,6 @@ class TargetTracker(object):
     def find_center(self, boxes, ids, frame, draw=False):
         points = {}
 
-        print("Hello", ids)
-
         for i in range(len(ids)): # Length of ids gives me no. of boxes detected inside the frame
             pts = np.reshape(boxes[i], (4, 2))
 
