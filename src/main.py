@@ -4,14 +4,14 @@ import cv2
 import numpy as np
 import rospy
 from marker_pose_estimator import MarkerPose
+from rospy.core import is_shutdown
 from sensor_msgs.msg import Image
 from geometry_msgs.msg import Point
 from geometry_msgs.msg import PoseStamped
 import time
+from land_mav import MakeTrajectory
 
 GO_TO_POINT = True
-
-
 
 if __name__ == '__main__':
     rospy.init_node('markerDetector', anonymous=False)
