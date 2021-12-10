@@ -18,10 +18,10 @@ This repository contains code for autonomous precision landing for Unmanned Aeri
 4. [stereo_image_proc](http://wiki.ros.org/stereo_image_proc)
 
 ## ArUco Tags
-These are fiducial markers used for the purpose of camera pose estimation. The framework developed uses ArUco markers for detection and landing. It contains an array of binary sqaures (black or white) and encodes a number. Each marker can be uniquely identified using this encoded number. They most commonly used for augmented reality and related applications. 
+These are fiducial markers used for the purpose of camera pose estimation. The framework developed uses ArUco markers for detection and landing. It contains an array of binary sqaures (black or white) and encodes a number. Each marker can be uniquely identified using this encoded number. They are most commonly used for augmented reality and related applications. 
 
 <p align="center">
-  <img src="https://miro.medium.com/max/400/1*X2bo0G-biWgrsaiot-4dRA.jpeg" style="height: 150px; width: 150px;"/>
+  <img src="https://miro.medium.com/max/400/1*X2bo0G-biWgrsaiot-4dRA.jpeg" style="height: 140px; width: 140px;"/>
 </p>
 
 ## Getting Started
