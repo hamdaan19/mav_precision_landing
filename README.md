@@ -54,7 +54,7 @@ catkin build
 source devel/setup.bash
 ```
 ## Usage
-To simulate a firefly drone moving vertically up and down over a marker to locate its position in 3D world coordinates:
+To run a basic simulation of a Firefly drone performing autonomous precision landing:
 ```
 roslaunch mav_precision_landing basic.launch
 ```
