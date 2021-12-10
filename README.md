@@ -59,7 +59,7 @@ To run a basic simulation of a Firefly drone performing autonomous precision lan
 roslaunch mav_precision_landing basic.launch
 ```
 ### Note
-* In the following <b>rotors_simulator/rotors_description/urdf/mav_with_vi_sensor.gazebo</b> change line 33 to this `"<origin xyz="0.1 0.0 -0.03" rpy="0.0 1.55 0.0" />"`
+* In the following file <b>rotors_simulator/rotors_description/urdf/mav_with_vi_sensor.gazebo</b> change line 33 to this `"<origin xyz="0.1 0.0 -0.03" rpy="0.0 1.55 0.0" />"` This changes the orientation of the [VI-Sensor](https://github.com/ethz-asl/libvisensor) from front-facing to down-facing. 
 
 ## Citations
 **rotors_simulator**
