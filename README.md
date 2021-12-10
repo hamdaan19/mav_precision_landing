@@ -17,6 +17,9 @@ This repository contains code for autonomous precision landing for Unmanned Aeri
 3. [Klampt](http://motion.cs.illinois.edu/software/klampt/latest/pyklampt_docs/Manual-Installation.html)
 4. [stereo_image_proc](http://wiki.ros.org/stereo_image_proc)
 
+## ArUco Tags
+These are fiducial markers used for the purpose of camera pose estimation. The framework developed uses ArUco markers for detection and landing. It contains an array of binary sqaures (black or white) and encodes a number. Each marker can be uniquely identified using this encoded number. They most commonly used for augmented reality and related applications. 
+
 ## Getting Started
 1. Install [rotors_simulator](https://github.com/ethz-asl/rotors_simulator) by following the instructions on the (linked) page.
 2. If your local machine has opencv-python installed, then uninstall it and install [opencv-contrib-python](https://pypi.org/project/opencv-contrib-python/).
