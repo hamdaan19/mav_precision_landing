@@ -20,6 +20,10 @@ This repository contains code for autonomous precision landing for Unmanned Aeri
 ## ArUco Tags
 These are fiducial markers used for the purpose of camera pose estimation. The framework developed uses ArUco markers for detection and landing. It contains an array of binary sqaures (black or white) and encodes a number. Each marker can be uniquely identified using this encoded number. They most commonly used for augmented reality and related applications. 
 
+<p align="center">
+  <img src="https://miro.medium.com/max/400/1*X2bo0G-biWgrsaiot-4dRA.jpeg" style="height: 150px; width: 150px;"/>
+</p>
+
 ## Getting Started
 1. Install [rotors_simulator](https://github.com/ethz-asl/rotors_simulator) by following the instructions on the (linked) page.
 2. If your local machine has opencv-python installed, then uninstall it and install [opencv-contrib-python](https://pypi.org/project/opencv-contrib-python/).
