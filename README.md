@@ -11,7 +11,7 @@ This repository contains code for autonomous precision landing for Unmanned Aeri
   <a href="https://www.youtube.com/watch?v=2M5zyiu5pnA"><img src="img/video_image.png" style="height: 300px; width: 528px;"/></a>
 </p>
 
-### Dependencies
+## Dependencies
 1. [rotors_simulator](https://github.com/ethz-asl/rotors_simulator) by ETH-ASL
 2. [opencv-contrib-python](https://pypi.org/project/opencv-contrib-python/)
 3. [Klampt](http://motion.cs.illinois.edu/software/klampt/latest/pyklampt_docs/Manual-Installation.html)
