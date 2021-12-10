@@ -3,7 +3,7 @@
 ![gazebo simulation](/img/photo1.jpg "Gazebo Simulation with rotors_simulator")
 ![disparity and raw image from VI sensor](/img/photo2.jpg "Disparity and raw image from VI sensor")
 
-This repository contains code for autonomous precision landing for micro aerial vehicles. It has been tested on ROS-Noetic. 
+This repository contains code for autonomous precision landing for Unmanned Aerial Vehicles. It has been simulated and tested on ROS-Noetic with the help of RotorS Simulator developed by ETH-ASL. The framework works on the basis of detecting an AR marker in the vicinity, estimating the position of the marker and finally planning its approach for landing.   
 
 ### Demo Video
 
@@ -15,6 +15,7 @@ This repository contains code for autonomous precision landing for micro aerial 
 1. [rotors_simulator](https://github.com/ethz-asl/rotors_simulator) by ETH-ASL
 2. [opencv-contrib-python](https://pypi.org/project/opencv-contrib-python/)
 3. [Klampt](http://motion.cs.illinois.edu/software/klampt/latest/pyklampt_docs/Manual-Installation.html)
+4. [stereo_image_proc](http://wiki.ros.org/stereo_image_proc)
 
 ## Getting Started
 1. Install [rotors_simulator](https://github.com/ethz-asl/rotors_simulator) by following the instructions on the (linked) page.
