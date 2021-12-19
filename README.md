@@ -26,9 +26,8 @@ These are fiducial markers used for the purpose of camera pose estimation. The f
 
 ## Getting Started
 1. Install [rotors_simulator](https://github.com/ethz-asl/rotors_simulator) by following the instructions on the (linked) page.
-2. If your local machine has opencv-python installed, then uninstall it and install [opencv-contrib-python](https://pypi.org/project/opencv-contrib-python/).
+2. Install [opencv-contrib-python](https://pypi.org/project/opencv-contrib-python/).
 ```
-pip uninstall opencv-python
 pip install opencv-contrib-python
 ```
 3. Install Klampt from source by following the instructions [here](https://github.com/krishauser/Klampt/blob/master/Cpp/docs/Tutorials/Install-Linux.md).
